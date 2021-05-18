@@ -33,8 +33,8 @@ export default function ArticleCardGroup({ limit, featured }) {
           const images = require.context('../../../images', true);
           let imgtitle = article.title.replace(/\s+/g, '-').replace(/\//g, '').toLowerCase();
 
-          //let featuredImgsrc = images(`./`+ imgtitle +`-featured.jpg`);
-          let featuredImgsrc = images(`./square.jpg`);
+          let featuredImgsrc = images(`./`+ imgtitle +`-featured.jpg`);
+          //let featuredImgsrc = images(`./square.jpg`);
 
           return (
             <Column colMd={12} colLg={12} noGutterMdLeft>
@@ -66,7 +66,7 @@ export default function ArticleCardGroup({ limit, featured }) {
         
 
         return (
-          <Column colMd={4} colLg={4} noGutterMdLeft>
+          <Column colMd={4} colLg={6} colXl={4} noGutterMdLeft>
             <ArticleCard
               title={article.title}
               author={article.author}
@@ -93,7 +93,7 @@ export default function ArticleCardGroup({ limit, featured }) {
       {data.allMdx.nodes.slice(0, 3).map((node, index) => {
         const article = node.frontmatter;
         return (
-          <Column colMd={4} colLg={4} noGutterMdLeft>
+          <Column colMd={4} colLg={6} colXl={4} noGutterMdLeft>
             <ArticleCard
               title={article.title}
               author={article.author}

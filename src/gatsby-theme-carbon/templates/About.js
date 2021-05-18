@@ -2,6 +2,7 @@ import React from 'react';
 import slugify from 'slugify';
 import { useStaticQuery, graphql } from "gatsby";
 
+import Utils from "gatsby-theme-carbon/src/components/Utils";
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import NextPrevious from '../components/NextPrevious';
@@ -95,6 +96,7 @@ const About = ({
         tabs={tabs}
         currentTab={currentTab}
       />
+            <Utils />
     </Layout>
   );
 };

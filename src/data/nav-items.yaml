@@ -1,6 +1,7 @@
 - title: About
   pages:
-    - path: /about
+    - title: Welcome to Hot Topics
+      path: /about
 - title: 2021 Hot Topics
   pages:
     - title: Getting Better Network Performance for your zCX Containers
