@@ -2,7 +2,7 @@ import React from "react";
 import slugify from "slugify";
 import { useStaticQuery, graphql } from "gatsby";
 
-import BackToTopBtn from "gatsby-theme-carbon/src/components/BackToTopBtn";
+import Utils from "gatsby-theme-carbon/src/components/Utils";
 import Layout from "./../components/Layout";
 import Aside from "gatsby-theme-carbon/src/components/Aside";
 import PageHeader from "../components/PageHeader";
@@ -11,7 +11,6 @@ import NextPrevious from "../components/NextPrevious";
 import PageTabs from "gatsby-theme-carbon/src/components/PageTabs";
 import Main from "gatsby-theme-carbon/src/components/Main";
 import Byline from "../components/Byline";
-import ArticleCardGroup from "../components/ArticleCardGroup";
 import MiniCard from "../components/MiniCard";
 
 const Default = ({
@@ -35,7 +34,7 @@ const Default = ({
   if (!pageContext) {
     return <React.Fragment>{children}</React.Fragment>;
   }
-  const { frontmatter = {}, relativePagePath, titleType } = pageContext;
+  const { frontmatter = {}, titleType } = pageContext;
   const {
     tabs,
     title,
@@ -132,7 +131,7 @@ const Default = ({
           location={location}
           slug={slug}
         />
-      <BackToTopBtn />
+      <Utils />
     </Layout>
   );
 };

@@ -19,11 +19,11 @@ const FirstRightText = () => (
   </p>
 );
 
-const SecondLeftText = () => <p>Learn key z/OS topics and features</p>;
+const SecondLeftText = () => <p>IBM Z and LinuxONE Content Solutions</p>;
 
 const SecondRightText = () => (
   <p>
-    Hot Topics content connects you with System z technical leaders and experts who design, code, test, document, teach, and support z/OS and its products.
+    Find all the technical resources in one place.
     <a
       className={calloutLink}
       href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/main/packages/example/src/gatsby-theme-carbon/templates/Homepage.js">
@@ -49,7 +49,7 @@ const customProps = {
       leftText={SecondLeftText}
       rightText={SecondRightText}
       color="white"
-      backgroundColor="#da1e28"
+      backgroundColor="#525252"
     />
   ),
 };

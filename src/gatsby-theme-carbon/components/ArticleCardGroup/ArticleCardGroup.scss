@@ -31,7 +31,7 @@
         padding: $spacing-06 $spacing-09 $spacing-06 $spacing-06;
 
         .bx--article-card__title {
-          @include carbon--type-style("productive-heading-06", true);
+          @include carbon--type-style("productive-heading-05", true);
           margin-bottom: $spacing-10;
           order: -1;
         }

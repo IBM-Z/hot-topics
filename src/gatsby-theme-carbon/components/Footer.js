@@ -3,7 +3,8 @@ import Footer from 'gatsby-theme-carbon/src/components/Footer';
 
 const Content = ({ buildTime }) => (
   <>
-  <p>Be the first to hear about new articles and updates.</p>
+  <p><strong>Follow Hot Topics</strong> to be the first to hear about new articles and updates.</p>
+  <p><a>Subscribe now</a></p>
   <p>Last updated: {buildTime}</p>
   </>
 );
