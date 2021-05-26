@@ -3,11 +3,11 @@ name: Deployment to IBM Cloud
 on:
   push:
     branches:
-      - master-remove
+      - master
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -22,8 +22,8 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Install IBM Cloud CLI
-        run: curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
+      # - name: Install IBM Cloud CLI
+      #   run: curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
 
       - name: Install Cloud Foundry CLI
         run: ibmcloud cf install -v 6.51.0
@@ -33,8 +33,8 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
         run:
           ibmcloud login -a "https://cloud.ibm.com" -u apikey -p "$API_KEY" -o
-          "insert-organization-here" -s "production" -r "us-south"
+          "jmdoll@us.ibm.com" -s "dev" -r "us-south"
 
       - name: Deploy website
         run: |
-          ibmcloud cf v3-zdt-push carbon-website -b https://github.com/cloudfoundry/nginx-buildpack.git
+          ibmcloud cf push hot-topics -b https://github.com/cloudfoundry/nginx-buildpack.git
