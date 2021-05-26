@@ -31,7 +31,7 @@ export default function ArticleCardGroup({ limit, featured }) {
         {data.allMdx.nodes.slice(0, 1).map((node, index) => {
           const article = node.frontmatter;
           const images = require.context('../../../images', true);
-          let imgtitle = article.title.replace(/\s+/g, '-').replace(/\//g, '').toLowerCase();
+          //let imgtitle = article.title.replace(/\s+/g, '-').replace(/\//g, '').toLowerCase();
 
           let featuredImgsrc = images(`./`+ imgtitle +`-featured.jpg`);
           //let featuredImgsrc = images(`./square.jpg`);
@@ -61,9 +61,11 @@ export default function ArticleCardGroup({ limit, featured }) {
         const article = node.frontmatter;
         const images = require.context('../../../images', true);
         const defaultImg = images(`./gallery.jpg`);
-        let imgtitle = article.title.replace(/\s+/g, '-').replace(/\/|\?|'|\(|\)/g, '').toLowerCase();
-        let imgsrc = images(`./`+ imgtitle +`.jpg`);
-        
+        //let imgtitle = article.title.replace(/\s+/g, '-').replace(/\/|\?|'|\(|\)/g, '').toLowerCase();
+
+        //let imgsrc = images(`./`+ imgtitle +`.jpg`);
+        let imgsrc = images(`./gallery.jpg`);
+
 
         return (
           <Column colMd={4} colLg={6} colXl={4} noGutterMdLeft>

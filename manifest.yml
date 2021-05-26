@@ -1,5 +1,5 @@
 applications:
-- instances: 1
+- instances: 2
   timeout: 600
   name: hot-topics
   buildpack: nodejs_buildpack
