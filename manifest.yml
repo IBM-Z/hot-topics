@@ -1,6 +1,6 @@
 applications:
 - instances: 1
-  timeout: 180
+  timeout: 600
   name: hot-topics
   buildpack: nodejs_buildpack
   command: npm run dev
