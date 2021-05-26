@@ -4,7 +4,7 @@ applications:
   name: hot-topics
   buildpack: nodejs_buildpack
   command: npm run dev
-  memory: 256MB
+  memory: 1GB
   domain: mybluemix.net
   host: hot-topics
   env:
