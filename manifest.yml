@@ -1,11 +1,3 @@
 applications:
-- instances: 1
-  timeout: 600
-  name: hot-topics
-  buildpack: nodejs_buildpack
-  command: npm run dev
-  memory: 2GB
-  domain: mybluemix.net
-  host: hot-topics
-  env:
-    OPTIMIZE_MEMORY: true
+  - name: your-deployment-name
+    memory: 256M
